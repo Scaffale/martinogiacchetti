@@ -16,13 +16,26 @@
 
   <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
 
   <!-- custom css -->
   <link rel="stylesheet" href="styles/style.min.css" />
 
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
 </head>
 <body>
-  <div data-splitting>Martino Giacchetti</div>
+  <div class="fullpage bottom">
+    <div class="name" data-splitting>Martino Giacchetti</div>
+  </div>
+  <div class="fullpage center">
+    <img  class="face" src="img/Martino.png">
+  </div>
+
+  <script type="text/javascript">
+    Splitting();
+    initGsap();
+  </script>
 </body>
 </html>
 
