@@ -17,20 +17,20 @@ function initGsap() {
     }
   });
 
-// add animations and labels to the timeline
-tl.addLabel("start")
-  .from(".char", { rotateY: '.25turn', scale: 0.9, opacity: 0, stagger: {
-                                                                grid: 'auto',
-                                                                from: "random",
-                                                                amount: 0.3 }
-    })
-  .addLabel("nameMoving")
-  .to(".char", { y: '-100vh', stagger: {
-                                  grid: 'auto',
-                                  from: "random",
-                                  amount: 0.3 }
-    })
-  // .addLabel("imageIn")
-  .from(".face", { scale: 8, opacity: 0 })
-  .addLabel("end");
+  // add animations and labels to the timeline
+  tl.addLabel("start")
+    .from(".name .char", { rotateY: '.25turn', scale: 0.9, opacity: 0, stagger: {
+                                                                  grid: 'auto',
+                                                                  from: "random",
+                                                                  amount: 0.3 }
+      })
+    .addLabel("nameMoving")
+    // .to(".name .char", { y: '-100vh', stagger: {
+    //                                 grid: 'auto',
+    //                                 from: "random",
+    //                                 amount: 0.3 }
+    //   })
+    // .addLabel("imageIn")
+    .to(".face", { scale: 1, opacity: 1 })
+    .addLabel("end");
 }
