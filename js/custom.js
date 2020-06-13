@@ -29,3 +29,25 @@ function initGsap() {
     .from('.menu', { opacity: 0 })
     .addLabel('end');
 }
+
+function frontendHover(color = null) {
+  document.querySelectorAll('.frontend .char').forEach(function(element, index) {
+    var newColor = (color == null) ? randomColor() : color;
+    gsap.to(element, { color: newColor,
+                       repeat: (color == null) ? -1 : 1,
+                       duration: 0.8,
+                       delay: getRandomInt(index) / 10 });
+  });
+}
+
+function randomColor() {
+  r = getRandomInt(255);
+  g = getRandomInt(255);
+  b = getRandomInt(255);
+  a = 1;
+  return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
