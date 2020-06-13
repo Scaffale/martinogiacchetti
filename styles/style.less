@@ -58,13 +58,39 @@ html, body {
   }
 }
 
+@keyframes name-loop {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(.5turn);
+    opacity: 0;
+  }
+}
+
+@keyframes developer-loop {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(.5em) scale(1.2);
+  }
+  75% {
+    transform: translateY(-.5em) scale(.2);
+    opacity: .2;
+  }
+}
+
 .name {
   font-size: 10vw/1.5;
-  left: 0;
-  position: fixed;
-  right: 0;
   text-align: center;
-  top: 50px;
+  margin-top: 50px;
+
+  &.splitting:hover .char {
+    animation: name-loop .8s cubic-bezier(.5, 0, .5, 1) both infinite;
+    animation-delay: calc(90ms * var(--char-index));
+  }
 }
 
 .scroll, .final {
@@ -125,11 +151,9 @@ html, body {
 }
 
 .menu {
-  bottom: 1em;
+  margin-bottom: 1em;
   display: flex;
   justify-content: center;
-  left: 1em;
-  position: fixed;
   width: 100%;
 
   .menu-item {
@@ -157,12 +181,34 @@ html, body {
 }
 
 .main-container {
-  height: 300vh;
+  height: 100%;
   position: relative;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.final {
-  bottom: 0;
-  position: absolute;
+.what {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 3em;
+
+  div.splitting {
+    transition: .3s;
+
+    &:first-of-type:hover {
+      color: pink;
+    }
+
+    &:nth-of-type(2):hover {
+      text-shadow: 2px -2px @sand-2-0, 4px -4px @sand-2-1, 6px -6px @sand-2-2, 8px -8px @sand-2-3, 10px -10px @sand-2-4;
+    }
+
+    &:nth-of-type(3):hover .char {
+      animation: developer-loop 1s cubic-bezier(.5, 0, .5, 1) both infinite;
+      animation-delay: calc(100ms * var(--char-index));
+    }
+  }
 }
