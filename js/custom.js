@@ -3,10 +3,10 @@ function initGsap() {
   let tl = gsap.timeline({
     // yes, we can add it to an entire timeline!
     scrollTrigger: {
-      trigger: ".container",
-      pin: true,   // pin the trigger element while active
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "+=500", // end after scrolling 500px beyond the start
+      // trigger: ".container",
+      // pin: true,   // pin the trigger element while active
+      // start: "top top", // when the top of the trigger hits the top of the viewport
+      // end: "+=500", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       snap: {
         snapTo: "labels", // snap to the closest label in the timeline
@@ -19,6 +19,7 @@ function initGsap() {
 
   // add animations and labels to the timeline
   tl.addLabel("start")
+    .to('.scroll', { opacity: 0 })
     .from(".name .char", { rotateY: '.25turn', scale: 0.9, opacity: 0, stagger: {
                                                                   grid: 'auto',
                                                                   from: "random",
@@ -32,5 +33,7 @@ function initGsap() {
     //   })
     // .addLabel("imageIn")
     .to(".face", { scale: 1, opacity: 1 })
+    .addLabel("menuIn")
+    .from(".menu", { opacity: 0 })
     .addLabel("end");
 }
