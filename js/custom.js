@@ -30,14 +30,18 @@ function initGsap() {
     .addLabel('end');
 }
 
-function frontendHover(color = null) {
-  document.querySelectorAll('.frontend .char').forEach(function(element, index) {
-    var newColor = (color == null) ? randomColor() : color;
-    gsap.to(element, { color: newColor,
-                       repeat: (color == null) ? -1 : 1,
-                       duration: 0.8,
-                       delay: getRandomInt(index) / 10 });
-  });
+function frontendHover(kill = false) {
+  if (kill) {
+    gsap.killTweensOf('.frontend .char');
+    gsap.to('.frontend .char', { color: '#FFF' });
+  } else {
+    document.querySelectorAll('.frontend .char').forEach(function(element, index) {
+      gsap.to(element, { color: randomColor(),
+                         repeat: -1,
+                         duration: 0.8,
+                         delay: getRandomInt(index) / 5 });
+    });
+  }
 }
 
 function randomColor() {
