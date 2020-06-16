@@ -4,44 +4,27 @@ function initGsap() {
 
   // add animations and labels to the timeline
   tl.addLabel('start')
-    .from('.name .char', { rotateY: '.25turn', scale: 0.9, opacity: 0, stagger: {
-                                                                                  grid: 'auto',
-                                                                                  from: 'random',
-                                                                                  amount: 0.3 }
-      })
-    .addLabel('what')
-    .from('.frontend .char', { x: -50, opacity: 0, stagger: {
-                                                              grid: 'auto',
-                                                              from: 'random',
-                                                              amount: 0.6 }
-      })
-    .from('.ux .char', { x: -50, opacity: 0, stagger: {
-                                                        grid: 'auto',
-                                                        from: 'random',
-                                                        amount: 0.6 }
-      })
-    .from('.dev .char', { x: -50, opacity: 0, stagger: {
-                                                        grid: 'auto',
-                                                        from: 'random',
-                                                        amount: 0.6 }
-      })
-    .addLabel('menuIn')
-    .from('.menu', { opacity: 0 })
+    .from('.greetings', { opacity: 0, duration: 2 })
+    .addLabel('greetings-out')
+    .to('.greetings', { opacity: 0, duration: 0.3, delay: 1 })
+    .from('.iam', { opacity: 0, duration: 1 })
+    .addLabel('name-in')
+    .from('.name .char', { rotateY: '.25turn',
+                           scale: 0.9,
+                           opacity: 0,
+                           delay: 0.6,
+                           duration: 1,
+                           stagger: { grid: 'auto', from: 'center', amount: 0.3 } })
+    .addLabel('what');
+  document.querySelectorAll('.what div').forEach(function(element, index) {
+    tl.from('.what div:nth-of-type(' + (index + 1) + ') .char', { x: -50,
+                                                            opacity: 0,
+                                                            duration: 0.3,
+                                                            stagger: {grid: 'auto', from: 'random', amount: 0.3 } })
+  });
+  tl.addLabel('what-shado')
+    .to('.what div', { className: 'shadows', stagger: { grid: 'auto', from: 0, amount: 0.2 } })
     .addLabel('end');
-}
-
-function frontendHover(kill = false) {
-  if (kill) {
-    gsap.killTweensOf('.frontend .char');
-    gsap.to('.frontend .char', { color: '#FFF' });
-  } else {
-    document.querySelectorAll('.frontend .char').forEach(function(element, index) {
-      gsap.to(element, { color: randomColor(),
-                         repeat: -1,
-                         duration: 0.8,
-                         delay: getRandomInt(index) / 5 });
-    });
-  }
 }
 
 function randomColor() {

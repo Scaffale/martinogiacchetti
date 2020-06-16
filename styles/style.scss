@@ -1,0 +1,177 @@
+
+/* As RGBa codes */
+
+$vinaccia-0: rgba(132,  7, 60,1); /* Main Primary color */
+$vinaccia-1: rgba(183, 57,110,1);
+$vinaccia-2: rgba(159, 26, 82,1);
+$vinaccia-3: rgba(101,  0, 43,1);
+$vinaccia-4: rgba( 65,  0, 27,1);
+
+$blue-1-0: rgba(  9, 73, 97,1); /* Main Secondary color (1) */
+$blue-1-1: rgba( 46,110,135,1);
+$blue-1-2: rgba( 23, 91,117,1);
+$blue-1-3: rgba(  2, 55, 75,1);
+$blue-1-4: rgba(  1, 35, 48,1);
+
+$sand-2-0: rgba(155,136,  8,1); /* Main Secondary color (2) */
+$sand-2-1: rgba(215,196, 67,1);
+$sand-2-2: rgba(186,166, 30,1);
+$sand-2-3: rgba(119,103,  0,1);
+$sand-2-4: rgba( 76, 66,  0,1);
+
+$dark-blue-0: rgba(  0,  4, 60,1); /* Main Primary color */
+$dark-blue-1: rgba(  0, 10,124,1);
+$dark-blue-2: rgba(  0,  7, 93,1);
+$dark-blue-3: rgba(  0,  1, 17,1);
+$dark-blue-4: rgba(  0,  0,  0,1);
+
+$dark-green-1-0: rgba(  0, 59, 36,1); /* Main Secondary color (1) */
+$dark-green-1-1: rgba(  0,121, 75,1);
+$dark-green-1-2: rgba(  0, 91, 57,1);
+$dark-green-1-3: rgba(  0, 16, 10,1);
+
+$dark-purple-2-0: rgba( 45,  0, 57,1); /* Main Secondary color (2) */
+$dark-purple-2-1: rgba( 93,  0,119,1);
+$dark-purple-2-2: rgba( 70,  0, 89,1);
+$dark-purple-2-3: rgba( 12,  0, 16,1);
+
+
+// Alternate colors
+$blue: #290052;
+$oil: #2e294e;
+$violet: #9933cc;
+$orange: #f4562a;
+$yellow: #ffd447;
+$lightpink: #ffcad4;
+
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
+html { height: 100%; display: flex; }
+body { height: 100%; margin: auto; }
+html, body {
+  background: $blue;
+  color: $lightpink;
+  font: normal 600 2vw Kanit, sans-serif;
+}
+
+@function shadow($color_base, $amount) {
+  $pixel_move: $amount * 2;
+  $shadow_ammount: lighten($color_base, $amount * 3);
+  @return #{$pixel_move}px -#{$pixel_move}px #{$shadow_ammount};
+}
+
+@function many_shadows($color_base, $amount) {
+  $shadows: shadow($color_base, 1);
+  @for $i from 2 through $amount {
+    $shadows: $shadows + ', ' + shadow($color_base, $i);
+  }
+  @return $shadows;
+}
+
+@keyframes name-loop {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(.5turn);
+    opacity: 0;
+  }
+}
+
+@keyframes developer-loop {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(.5em) scale(1.2);
+  }
+  75% {
+    transform: translateY(-.5em) scale(.2);
+    opacity: .2;
+  }
+}
+
+@keyframes hcid-loop {
+  to {
+    transform: rotateX(0) scale(1.2);
+  }
+}
+
+.main-container {
+  height: 100%;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.what {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 5vw;
+
+  div {
+    transition: .3s;
+
+    &.shadows {
+      color: $sand-2-1;
+      text-shadow: many_shadows($violet, 4);
+
+      &:hover {
+        color: $lightpink;
+        text-shadow: many_shadows($violet, 10);
+        // text-shadow: unset;
+      }
+    }
+
+    &:nth-of-type(2):hover .char {
+      animation: hcid-loop 1s cubic-bezier(.5, 0, .5, 1) both infinite;
+      animation-delay: calc(100ms * var(--char-index));
+    }
+
+    &:nth-of-type(3):hover .char {
+      animation: developer-loop 1s cubic-bezier(.5, 0, .5, 1) both infinite;
+      animation-delay: calc(100ms * var(--char-index));
+    }
+  }
+}
+
+.greetings {
+  bottom: 0;
+  font-size: 50vw;
+  left: 0;
+  line-height: 70vh;
+  margin: auto;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+.name-container {
+  align-items: baseline;
+  display: flex;
+  flex-basis: 0;
+  flex-direction: row;
+  justify-content: center;
+
+  .iam {
+    font-size: 3vw;
+  }
+
+  .name {
+    font-size: 7vw;
+    text-align: center;
+    margin-left: .3em;
+    margin-top: 50px;
+
+    &.splitting:hover .char {
+      animation: name-loop .8s cubic-bezier(.5, 0, .5, 1) both infinite;
+      animation-delay: calc(90ms * var(--char-index));
+    }
+  }
+}
