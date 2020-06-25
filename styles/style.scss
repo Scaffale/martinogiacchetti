@@ -47,7 +47,12 @@ $lightpink: #ffcad4;
 @import url(https://fonts.googleapis.com/css?family=Kanit:600);
 
 html { height: 100%; display: flex; }
-body { height: 100%; margin: auto; }
+body {
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
 html, body {
   background: $blue;
   color: $lightpink;
@@ -55,8 +60,8 @@ html, body {
 }
 
 @function shadow($color_base, $amount, $directionX, $directionY) {
-  $pixel_move: $amount * 2;
-  $shadow_ammount: lighten($color_base, $amount * 3);
+  $pixel_move: $amount;
+  $shadow_ammount: lighten($color_base, $amount * 1.5);
   @return #{$pixel_move * $directionX}px #{$pixel_move * $directionY}px #{$shadow_ammount};
 }
 
@@ -131,23 +136,31 @@ html, body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   font-size: 5vw;
+  max-height: 49%;
 
   div {
     transition: .3s;
 
     &.shadows {
       color: $sand-2-1;
-      height: 1.5em;
-      line-height: 1em;
+      // height: 1.5em;
+      // line-height: 1em;
+      cursor: pointer;
       // text-shadow: many_shadows($violet, 4);
+      padding: 0 .5em;
 
       &:hover {
         color: $lightpink;
         text-shadow: many_shadows($violet, 10);
         // text-shadow: unset;
-        margin-left: -.7em;
-        line-height: 1.6em;
+        // margin-left: -.7em;
+        // line-height: 1.6em;
+      }
+
+      &:active {
+        text-shadow: many_shadows($violet, 50);
       }
     }
 
@@ -213,6 +226,42 @@ html, body {
       .invisible {
         opacity: 1;
       }
+    }
+  }
+}
+
+.particles {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+
+  .particle {
+    background-color: $lightpink;
+    border-radius: 100%;
+    bottom: -10px;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  @for $i from 1 through 60 {
+      @keyframes particle-animation-#{$i} {
+        100% {
+          transform: translateX((random(100) - 50) * 1vw) translateY(-110vh) translateZ(random(100) * 1px);
+        }
+      }
+
+    .particle:nth-child(#{$i}) {
+      animation: particle-animation-#{$i} 20s linear infinite;
+      animation-delay: random(30) * 0.6s;
+      $size: random(5) + 1 + px;
+      opacity: random(100)/100;
+      height: $size;
+      width: $size;
+      left: random(100) * 1vw;
     }
   }
 }

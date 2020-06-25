@@ -4,12 +4,6 @@ function initGsap() {
 
   // add animations and labels to the timeline
   tl.addLabel('start')
-    .from('.greetings', { opacity: 0, duration: 2 })
-    .addLabel('greetings-out')
-    .to('.greetings', { opacity: 0, duration: 0.3, delay: 1 })
-    .from('.iam', { opacity: 0, duration: 1 })
-    .addLabel('name-in')
-    .to('.iam', { opacity: 0, duration: 0.3 })
     .from('.name .char', { rotateY: '.25turn',
                            scale: 0.9,
                            opacity: 0,
