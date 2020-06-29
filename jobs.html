@@ -16,16 +16,13 @@
 
   <!-- gsap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
 
   <!-- barba.js -->
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
   <!-- custom css -->
   <link rel="stylesheet" href="styles/style.css" />
-
-  <!-- polyfill -->
-  <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 
   <!-- custom js -->
   <script src="js/custom.js"></script>
@@ -35,16 +32,10 @@
   <div class="name-container">
     <div class="name" data-splitting>Martino Giacchetti</div>
   </div>
-  <div class="main-container" data-barba="container" data-barba-namespace="home">
-    <div class="what">
-      <div class="shadows" data-splitting>Frontend Web</div>
-      <div class="shadows" data-splitting>HCID / UX</div>
-      <div class="shadows" data-splitting>Developer</div>
-      <div class="shadows jobs" data-splitting><a href="/jobs.html">Jobs</a></div>
-      <!-- <div class="shadows" data-splitting>Education</div> -->
-      <!-- <div class="shadows" data-splitting>Principles</div> -->
-      <!-- <div class="shadows" data-splitting>Sideprojects</div> -->
-      <!-- <div class="shadows" data-splitting>Contact</div> -->
+  <div class="main-container" data-barba="container" data-barba-namespace="jobs">
+    <div class="jobs-container">
+      <p>My work is to make shure my work won't be visible.</p>
+      <a href="/index.html">home</a>
     </div>
   </div>
   <div class="transition-panel"></div>
@@ -112,9 +103,9 @@
   </div>
 
   <script type="text/javascript">
-    // Splitting();
+    Splitting();
     // initGsap();
-    initBarba();
+    // initBarba();
   </script>
 </body>
 </html>

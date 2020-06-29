@@ -1,5 +1,5 @@
 function initGsap() {
-  gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollTrigger);
   let tl = gsap.timeline();
 
   // add animations and labels to the timeline
@@ -7,18 +7,19 @@ function initGsap() {
     .from('.name .char', { rotateY: '.25turn',
                            scale: 0.9,
                            opacity: 0,
-                           delay: 0,
+                           delay: 1,
                            duration: 1,
                            stagger: { grid: 'auto', from: 'center', amount: 0.3 } })
     .addLabel('what');
-  document.querySelectorAll('.what div').forEach(function(element, index) {
-    tl.from('.what div:nth-of-type(' + (index + 1) + ') .char', { x: -50,
+  document.querySelectorAll('.what .shadows').forEach(function(element, index) {
+    tl.from('.what .shadows:nth-of-type(' + (index + 1) + ') .char', { x: -50,
                                                             opacity: 0,
                                                             delay: -0.2,
                                                             duration: 0.3,
                                                             stagger: {grid: 'auto', from: 'random', amount: 0.3 } })
   });
   tl.addLabel('end');
+  tl.timeScale(1.3);
 }
 
 function randomColor() {
