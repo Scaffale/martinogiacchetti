@@ -3,7 +3,7 @@ function initBarba() {
     transitions: [{
       sync: false,
       leave(data) {
-        gsap.to(data.current.container, { opacity: 0, top: 500, ease: 'power2.in'})
+        gsap.to(data.current.container, { opacity: 0, duration: 0.3, delay: 0.5});
         return gsap.to('.transition-panel', {top: 0, right: 0, rotation: 0,
                                       ease: 'power2.out', duration: 1});
       },
@@ -16,7 +16,6 @@ function initBarba() {
       namespace: 'home',
       beforeLeave() {
         console.log('beforeLeave home');
-        gsap.to('.what', {opacity: 0});
       },
       beforeEnter() {
         console.log('beforeEnter home');
