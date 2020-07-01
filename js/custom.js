@@ -21,6 +21,7 @@ function initGsapHome() {
                            delay: 1,
                            duration: 1,
                            stagger: { grid: 'auto', from: 'center', amount: 0.3 } })
+    .from('.contact div', { opacity: 0, duration: 1 })
     .addLabel('what');
   document.querySelectorAll('.what .shadows').forEach(function(element, index) {
     tl.from('.what .shadows:nth-of-type(' + (index + 1) + ') .char', { x: -50,
@@ -81,4 +82,48 @@ function initGsapJobs(argument) {
               .addLabel('after')
               .to('.pointer', { text: 'take a look at my studies', top: 90 })
               .addLabel('end');
+}
+
+function nameClick() {
+  if (document.querySelectorAll('.name-container')[0].dataset.active == 'true') {
+    document.querySelectorAll('.name-container')[0].dataset.active = false;
+    let timelineName = gsap.timeline();
+    timelineName.to('.contact', { opacity: 0 })
+                .to('.name-container', { height: '8.2rem' })
+                .set('.name-container', { clearProps: 'height' })
+                .set('.contact', { clearProps: 'all' })
+                .to('.contact', { opacity: 1 })
+                .play();
+  } else {
+    document.querySelectorAll('.name-container')[0].dataset.active = true;
+    let timelineName = gsap.timeline();
+    timelineName.to('.contact', { opacity: 0 })
+                .to('.name-container', { height: '100%' })
+                .set('.contact', { flexDirection: 'column', fontSize: '2em' })
+                .to('.contact', { opacity: 1 })
+                .play();
+  }
+}
+
+function copy(str) {
+  const el = document.createElement('textarea');
+  el.value = str;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  showCopiedNotice();
+}
+
+function showCopiedNotice() {
+  const notice = document.createElement('div');
+  notice.setAttribute('class', 'notice');
+  notice.innerText = 'Copied to clipboard ;)';
+  document.body.appendChild(notice);
+  setTimeout(function() {
+    document.body.removeChild(notice);
+  }, 6100);
 }
