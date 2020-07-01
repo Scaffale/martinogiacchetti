@@ -18,9 +18,8 @@ function initBarba() {
         console.log('beforeLeave home');
       },
       beforeEnter() {
-        console.log('beforeEnter home');
         Splitting();
-        initGsap();
+        initGsapHome();
       }
     },
     {
@@ -29,7 +28,8 @@ function initBarba() {
         console.log('ci sono');
       },
       beforeEnter() {
-        console.log('beforeEnter jobs');
+        Splitting();
+        initGsapJobs();
         gsap.from('.jobs-container *', { opacity: 0, duration: 1, delay: 1, stagger: { grid: 'auto', from: 'random', amount: 0.3 } });
       }
     }]
