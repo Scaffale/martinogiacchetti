@@ -46,8 +46,8 @@ function initGsapJobs(argument) {
                                                          trigger: '.corehab .description',
                                                          scrub: true, pin: false }});
 
-  gsap.to('.pervoice .position, .pervoice .company, .pervoice .overview', { opacity: 0, scrollTrigger: {start: "top bottom",
-                                                         end: "top center",
+  gsap.to('.pervoice .position, .pervoice .company, .pervoice .overview', { opacity: 0, scrollTrigger: {start: "top top",
+                                                         end: "bottom top",
                                                          trigger: '.pervoice .description',
                                                          scrub: true, pin: false }});
   let timelineYear = gsap.timeline({scrollTrigger: {
@@ -58,13 +58,13 @@ function initGsapJobs(argument) {
     end: '200%'
   }});
   timelineYear.addLabel('start')
-              .to('.pointer', { marginLeft: 0, textAlign: 'center', width: '100%', fontSize: '3em' })
+              .to('.pointer', { marginLeft: 0, textAlign: 'center', width: '100%', fontSize: '3rem' })
               .addLabel('now')
               .to('.pointer', { text: 'Now...' })
               .addLabel('before')
               .to('.pointer', { text: 'and before?' })
               .addLabel('after')
-              .to('.pointer', { text: '2018', rotate: 360, marginLeft: 50, width: 'auto', textAlign: 'left', fontSize: '1em'})
+              .to('.pointer', { text: '2018', rotate: 360, marginLeft: 50, width: 'auto', textAlign: 'left', fontSize: '2.5rem'})
               .addLabel('end');
   let timelineYearTwo = gsap.timeline({scrollTrigger: {
     trigger: '.year-change.two',
@@ -74,35 +74,14 @@ function initGsapJobs(argument) {
     end: 'bottom top'
   }});
   timelineYearTwo.addLabel('start')
-              .to('.pointer', { marginLeft: 0, textAlign: 'center', width: '100%', fontSize: '3em' })
+              .to('.pointer', { marginLeft: 0, textAlign: 'center', width: '100%', fontSize: '3rem' })
               .addLabel('before')
               .to('.pointer', { text: '2018...' })
               .addLabel('before')
               .to('.pointer', { text: 'and before?' })
               .addLabel('after')
-              .to('.pointer', { text: 'take a look at my studies', top: 90 })
+              .to('.pointer', { text: 'take a look at my studies...', top: 90 })
               .addLabel('end');
-}
-
-function nameClick() {
-  if (document.querySelectorAll('.name-container')[0].dataset.active == 'true') {
-    document.querySelectorAll('.name-container')[0].dataset.active = false;
-    let timelineName = gsap.timeline();
-    timelineName.to('.contact', { opacity: 0 })
-                .to('.name-container', { height: '8.2rem' })
-                .set('.name-container', { clearProps: 'height' })
-                .set('.contact', { clearProps: 'all' })
-                .to('.contact', { opacity: 1 })
-                .play();
-  } else {
-    document.querySelectorAll('.name-container')[0].dataset.active = true;
-    let timelineName = gsap.timeline();
-    timelineName.to('.contact', { opacity: 0 })
-                .to('.name-container', { height: '100%' })
-                .set('.contact', { flexDirection: 'column', fontSize: '2em' })
-                .to('.contact', { opacity: 1 })
-                .play();
-  }
 }
 
 function copy(str) {

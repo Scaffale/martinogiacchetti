@@ -15,7 +15,6 @@ function initBarba() {
     views: [{
       namespace: 'home',
       beforeLeave() {
-        console.log('beforeLeave home');
       },
       beforeEnter() {
         Splitting();
@@ -25,12 +24,21 @@ function initBarba() {
     {
       namespace: 'jobs',
       beforeLeave() {
-        console.log('ci sono');
       },
       beforeEnter() {
         Splitting();
         initGsapJobs();
         gsap.from('.jobs-container *', { opacity: 0, duration: 1, delay: 1, stagger: { grid: 'auto', from: 'random', amount: 0.3 } });
+      }
+    },
+    {
+      namespace: 'about',
+      beforeLeave() {
+      },
+      beforeEnter() {
+        Splitting();
+        gsap.from('.about .char', { opacity: 0, top: -100, duration: 0.2, delay: 0.5, stagger: { grid: 'auto', from: 'random', amount: 1 } });
+        gsap.from('li span.arrow', { opacity: 0, duration: 0.2, delay: 2, stagger: { grid: 'auto', from: 0, amount: 0.3 } });
       }
     }]
   });
