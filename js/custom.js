@@ -46,8 +46,8 @@ function initGsapJobs(argument) {
                                                          trigger: '.corehab .description',
                                                          scrub: true, pin: false }});
 
-  gsap.to('.pervoice .position, .pervoice .company, .pervoice .overview', { opacity: 0, scrollTrigger: {start: "top top",
-                                                         end: "bottom top",
+  gsap.to('.pervoice .position, .pervoice .company, .pervoice .overview', { opacity: 0, scrollTrigger: {start: "top bottom",
+                                                         end: "top top",
                                                          trigger: '.pervoice .description',
                                                          scrub: true, pin: false }});
   let timelineYear = gsap.timeline({scrollTrigger: {

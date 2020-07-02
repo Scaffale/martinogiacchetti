@@ -5,6 +5,7 @@ $oil: #2e294e;
 $violet: #9933cc;
 $orange: #f4562a;
 $yellow: #ffd447;
+$sand: #f7e5bf;
 $lightpink: #ffcad4;
 
 @import url(https://fonts.googleapis.com/css?family=Kanit:600);
@@ -16,15 +17,15 @@ body {
 }
 
 html, body {
-  background: $blue;
-  color: $lightpink;
+  background: $sand;
+  color: $blue;
   font: normal 600 2vw Kanit, sans-serif;
 }
 
 @media print {
   body {
     &::before {
-      content: 'just mail me: martino.giacchetti@gmail.com and stop printing websites';
+      content: 'just mail me: martino.giacchetti@gmail.com and quit printing websites';
       font-size: 3rem;
     }
 
@@ -205,6 +206,7 @@ a {
 }
 
 .name-container {
+  color: $oil;
   position: relative;
   width: 100%;
 
@@ -235,7 +237,7 @@ a {
   z-index: 100;
 
   .particle {
-    background-color: $lightpink;
+    background-color: $orange;
     border-radius: 100%;
     bottom: -10px;
     pointer-events: none;
@@ -264,6 +266,7 @@ a {
 .transition-panel {
   align-items: center;
   background-color: $orange;
+  color: $oil;
   display: flex;
   height: 100vh;
   justify-content: center;
