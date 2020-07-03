@@ -29,6 +29,11 @@ function initBarba() {
         Splitting();
         initGsapJobs();
         gsap.from('.jobs-container *', { opacity: 0, duration: 1, delay: 1, stagger: { grid: 'auto', from: 'random', amount: 0.3 } });
+      },
+      afterEnter() {
+        setTimeout(function() {
+          ScrollTrigger.refresh();
+        }, 1000);
       }
     },
     {

@@ -82,6 +82,7 @@ function initGsapJobs(argument) {
               .addLabel('after')
               .to('.pointer', { text: 'take a look at my studies...', top: 90 })
               .addLabel('end');
+  setTimeout(function() {ScrollTrigger.refresh();}, 500);
 }
 
 function copy(str) {
