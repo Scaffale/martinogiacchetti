@@ -184,7 +184,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $orange;
 
   &:active,
   &:visited {
@@ -375,7 +375,7 @@ section {
   width: 100%;
 
   a {
-    color: inherit;
+    color: $orange;
     display: block;
 
     &.glow {
@@ -415,6 +415,7 @@ section {
 }
 
 .links {
+  color: $orange;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
