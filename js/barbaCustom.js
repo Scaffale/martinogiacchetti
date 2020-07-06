@@ -45,6 +45,15 @@ function initBarba() {
         gsap.from('.about .char', { opacity: 0, top: -100, duration: 0.2, delay: 0.5, stagger: { grid: 'auto', from: 'random', amount: 1 } });
         gsap.from('li span.arrow', { opacity: 0, duration: 0.2, delay: 2, stagger: { grid: 'auto', from: 0, amount: 0.3 } });
       }
+    },
+    {
+      namespace: 'education',
+      beforeLeave() {
+      },
+      beforeEnter() {
+        Splitting();
+        gsap.from('.education div', { opacity: 0, duration: 0.2, delay: 0.5, stagger: { grid: 'auto', from: 0, amount: 1 } });
+      }
     }]
   });
 }
