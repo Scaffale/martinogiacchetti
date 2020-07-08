@@ -188,7 +188,7 @@ a {
 
   &:active,
   &:visited {
-    color: inherit;
+    color: $orange;
   }
 }
 
@@ -455,4 +455,10 @@ section {
   display: flex;
   justify-content: center;
   padding: 4rem 15% 2rem 15%;
+}
+
+.cv {
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
 }

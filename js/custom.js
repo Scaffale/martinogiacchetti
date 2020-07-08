@@ -30,7 +30,8 @@ function initGsapHome() {
                                                             duration: 0.3,
                                                             stagger: {grid: 'auto', from: 'random', amount: 0.3 } })
   });
-  tl.addLabel('end');
+  tl.from('.cv', { opacity: 0})
+    .addLabel('end');
   tl.timeScale(1.3);
 }
 
