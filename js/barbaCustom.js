@@ -8,6 +8,7 @@ function initBarba() {
                                       ease: 'power2.out', duration: 1});
       },
       enter(data) {
+        window.scrollTo(0,0);
         return gsap.to('.transition-panel', {...randomPanel(),
                                       ease: 'power2.in', duration: 1});
       }
