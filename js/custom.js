@@ -101,7 +101,8 @@ function copy(str) {
 
 function showCopiedNotice() {
   const notice = document.createElement('div');
-  notice.setAttribute('class', 'notice');
+  notice.setAttribute('class', 'notice alert alert-success shadow-soft');
+  notice.setAttribute('role', 'alert');
   notice.innerText = 'Copied to clipboard ;)';
   document.body.appendChild(notice);
   setTimeout(function() {
