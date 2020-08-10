@@ -11,22 +11,22 @@
   <!-- <base href="https://www.martinogiacchetti.it/"> -->
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
   <!-- splitting -->
@@ -43,11 +43,14 @@
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
   <!-- custom css -->
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <!-- polyfill -->
+  <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 
   <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <script src="js/barbaCustom.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/barbaCustom.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172156228-1"></script>
@@ -62,7 +65,7 @@
 </head>
 <body data-barba="wrapper">
   <div class="name-container">
-    <a href="/index.html" class="name" data-splitting>Martino Giacchetti</a>
+    <a href="/half-brutal/index.html" class="name" data-splitting>Martino Giacchetti</a>
     <div class="contact">
       <div class="email" onclick="copy('martino.giacchetti@gmail.com')">
         martino.giacchetti@gmail.com
@@ -72,30 +75,26 @@
       </div>
     </div>
   </div>
-  <div class="main-container" data-barba="container" data-barba-namespace="jobs">
-    <div class="jobs-container">
-      <h3>I work my best to<br />make my work <span class="invisible" data-splitting>invisible</span></h3>
-      <h3 class='scroll'><small>↓</small></h3>
-      <div class="pointer">Now</div>
-      <section class="single-job corehab">
-        <h4 class="position">Frontend Web</h4>
-        <h5 class="company">CoRehab</h5>
-        <p class="overview">Since 2018 I'm working as a Frontend Web dev for the new technoligies.</p>
-        <p class="description">My main activity is to make the mockup real, integrating all the functions with the backend (which more than often I develop) and covering code with tests. (Ruby On Rails, Python, mysql)</p>
-      </section>
-      <div class="year-change one"></div>
-      <section class="single-job pervoice">
-        <h4 class="position">UX designer</h4>
-        <h5 class="company">PerVoice</h5>
-        <p class="overview">Since 2017 I worked as a UX designer for a company specialized in voice transcription systems.</p>
-        <p class="description">My main activity was to make as human friendly as possible a tool which was designed by and for researchers of the voice synthesization field. It was as fun as hard. (Sketch, Balsamiq, USM)</p>
-      </section>
-      <div class="year-change two"></div>
-      <div class="large-center-link">
-        <a href="/education.html" class="glow">Education</a>
-        <a href="/index.html" class="">Home</a>
-        <a href="/about.html" class="">About me</a>
-      </div>
+  <div class="main-container" data-barba="container" data-barba-namespace="education">
+    <div class="education">
+      <div class="year">2017</div>
+      <div class="place">University of Trento</div>
+      <div class="study-title">Master Degree in HCID specialized in Cognitive Psychology</div>
+      <div class="thesis"><small>Thesis: </small>Software Design for experimental projects and its cross-modal application in museum exhibits and art disciplines</div>
+      <div class="year">2015</div>
+      <div class="place">University College London and EIT Digital</div>
+      <div class="study-title">Summer School in Urban life and mobility</div>
+      <div class="place">Université Paris Sud</div>
+      <div class="study-title">Master Degree in HCID</div>
+      <div class="year">2014</div>
+      <div class="place">University of Trento</div>
+      <div class="study-title">Undergraduate Degree in Computer Science</div>
+      <div class="thesis"><small>Thesis: </small>The effect of visual complexity on the evaluation of mobile interfaces: An experimental study</div>
+    </div>
+    <div class="links">
+      <a href="/half-brutal/index.html">Home</a>
+      <a href="/half-brutal/about.html">About me</a>
+      <a href="/half-brutal/jobs.html">Experiences</a>
     </div>
   </div>
   <div class="transition-panel"><h1>HOLD</h1></div>

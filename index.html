@@ -29,28 +29,16 @@
   <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- splitting -->
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-
-  <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/TextPlugin.min.js"></script>
-
-  <!-- barba.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-
-  <!-- custom css -->
-  <link rel="stylesheet" href="styles/style.css" />
+  <!-- neumorphism css -->
+  <link rel="stylesheet" href="..style/style.css" />
+  <link rel="stylesheet" href="css/neumorphism.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <script src="https://kit.fontawesome.com/63c5abad67.js" crossorigin="anonymous"></script>
 
   <!-- polyfill -->
   <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <script src="js/barbaCustom.js"></script>
+  <script src="../js/custom.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172156228-1"></script>
@@ -63,98 +51,195 @@
   </script>
 
 </head>
-<body data-barba="wrapper">
-  <div class="name-container">
-    <div class="name" data-splitting>Martino Giacchetti</div>
-    <div class="contact">
-      <div class="email" onclick="copy('martino.giacchetti@gmail.com')">
-        martino.giacchetti@gmail.com
+<body>
+  <div class="container mt-6 mb-6">
+    <div class="card bg-primary shadow-soft text-center border-light">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h1>
+              Martino Giacchetti
+            </h1>
+          </div>
+        </div>
       </div>
-      <div class="phone" onclick="copy('+393511135218')">
-        (+39) 351 11 35 218
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h3>
+              martino.giacchetti@gmail.com
+              <button class="btn btn-primary" type="button" onclick="copy('martino.giacchetti@gmail.com')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>
+              (+39) 351 11 35 218
+              <button class="btn btn-primary" type="button" onclick="copy('+393511135218')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="main-container" data-barba="container" data-barba-namespace="home">
-    <div class="what">
-      <!-- <div class="shadows" data-splitting>Frontend Web</div> -->
-      <!-- <div class="shadows" data-splitting>HCID / UX</div> -->
-      <!-- <div class="shadows" data-splitting>Developer</div> -->
-      <div class="shadows jobs" data-splitting><a href="/jobs.html">Experiences</a></div>
-      <div class="shadows" data-splitting><a href="/education.html">Education</a></div>
-      <div class="shadows" data-splitting><a href="/about.html">About Me</a></div>
-      <div class="shadows" data-splitting><a href="/sideprojects.html">Sideprojects</a></div>
-      <!-- <div class="shadows" data-splitting>Contact</div> -->
-    </div>
-    <a class="cv" href="/MartinoGiacchetti.pdf">Downlowad CV</a>
-  </div>
-  <div class="transition-panel"><h1>HOLD</h1></div>
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
   </div>
 
-  <script type="text/javascript">
-    initBarba();
-  </script>
+  <div class="container my-6 py-3">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="card bg-primary shadow-soft text-center border-light p-4">
+          <h2>
+            I've been focusing on Human-Centric Design. Problem-Solving attitude, and I always welcome constructive feedback.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-6">
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card bg-primary border-light shadow-soft text-center">
+          <div class="card-header">
+            <div class="row">
+              <div class="col">
+                <h5>
+                  Find out more about "what did I study"
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3>
+                  Education
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <a href="/education.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-primary border-light shadow-soft text-center">
+          <div class="card-header">
+            <div class="row">
+              <div class="col">
+                <h5>
+                  Take a look at what I do
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3>
+                  Work experiences
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <a href="/works.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card bg-primary border-light shadow-soft text-center">
+          <div class="card-header">
+            <div class="row">
+              <div class="col">
+                <h5>
+                  Who I am in a nutshell
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3>
+                  About me
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <a href="/education.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-primary border-light shadow-soft text-center">
+          <div class="card-header">
+            <div class="row">
+              <div class="col">
+                <h5>
+                  Take a look at some sideprojects
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3>
+                  <span class="mr-1"><span class="fab fa-github"></span></span>Github
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <a href="https://github.com/Scaffale" target="_blank" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-6">
+    <div class="row justify-content-center mt-5">
+      <div class="d-inline-flex">
+        <a href="../MartinoGiacchetti.pdf" class="btn btn-primary">
+          Download CV (.pdf)
+          <span class="ml-1"><span class="fa fa-download" aria-hidden="true"></span></span>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="d-inline-flex">
+        <a href="/half-brutal/index.html">Try different website version</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 

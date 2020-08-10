@@ -29,28 +29,16 @@
   <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- splitting -->
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-
-  <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/TextPlugin.min.js"></script>
-
-  <!-- barba.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-
-  <!-- custom css -->
-  <link rel="stylesheet" href="styles/style.css" />
+  <!-- neumorphism css -->
+  <link rel="stylesheet" href="..style/style.css" />
+  <link rel="stylesheet" href="css/neumorphism.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <script src="https://kit.fontawesome.com/63c5abad67.js" crossorigin="anonymous"></script>
 
   <!-- polyfill -->
   <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <script src="js/barbaCustom.js"></script>
+  <script src="../js/custom.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172156228-1"></script>
@@ -63,105 +51,98 @@
   </script>
 
 </head>
-<body data-barba="wrapper">
-  <div class="name-container">
-    <a href="/index.html" class="name" data-splitting>Martino Giacchetti</a>
-    <div class="contact">
-      <div class="email" onclick="copy('martino.giacchetti@gmail.com')">
-        martino.giacchetti@gmail.com
+<body>
+  <div class="container mt-6 mb-6">
+    <div class="card bg-primary shadow-soft text-center border-light">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h1>
+              Martino Giacchetti
+            </h1>
+          </div>
+        </div>
       </div>
-      <div class="phone" onclick="copy('+393511135218')">
-        (+39) 351 11 35 218
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h3>
+              martino.giacchetti@gmail.com
+              <button class="btn btn-primary" type="button" onclick="copy('martino.giacchetti@gmail.com')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>
+              (+39) 351 11 35 218
+              <button class="btn btn-primary" type="button" onclick="copy('+393511135218')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="main-container" data-barba="container" data-barba-namespace="about">
-    <div class="about">
-      <div data-splitting>Nobody can be summarized in just one page.</div>
-      <div data-splitting>So here's a short list of things I <em>really</em> like:</div>
-      <ul>
-        <li data-splitting><span class="arrow">-></span>Pair programming </li>
-        <li data-splitting><span class="arrow">-></span><a href="https://1x.engineer" target="_blank">1x.engineer</a></li>
-        <li data-splitting><span class="arrow">-></span>Smartworking</li>
-        <li data-splitting><span class="arrow">-></span><a href="https://github.com/rubocop-hq/rubocop" target="_blank">Rubocop (gem)</a> or any linter</li>
-        <li data-splitting><span class="arrow">-></span><a href="https://en.wikipedia.org/wiki/SOLID" target="_blank">S.O.L.I.D</a> principles</li>
-        <li data-splitting><span class="arrow">-></span>TDD</li>
-        <li data-splitting><span class="arrow">-></span><a href="https://www.achillemarozzo.it/historical-european-martial-arts" target="_blank">HEMA</a></li>
-      </ul>
-    </div>
-    <div class="links">
-      <a href="/index.html">Home</a>
-      <a href="/education.html">Education</a>
-      <a href="/jobs.html">Experiences</a>
-    </div>
-  </div>
-  <div class="transition-panel"><h1>HOLD</h1></div>
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
   </div>
 
-  <script type="text/javascript">
-    initBarba();
-  </script>
+  <div class="container my-6 py-3">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="card bg-primary shadow-soft text-center border-light p-4">
+          <h2>
+            Nobody can be summarized in just one page.
+            <br>
+            So here's a short list of things I <em>really</em> like: </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+          <h4 class="display-4">Pair programming </h4>
+          <h4 class="display-4"><a href="https://1x.engineer" target="_blank">1x.engineer</a></h4>
+          <h4 class="display-4">Smartworking</h4>
+          <h4 class="display-4"><a href="https://github.com/rubocop-hq/rubocop" target="_blank">Rubocop (gem)</a> or any linter</h4>
+          <h4 class="display-4"><a href="https://en.wikipedia.org/wiki/SOLID" target="_blank">S.O.L.I.D</a> principles</h4>
+          <h4 class="display-4">TDD</h4>
+          <h4 class="display-4"><a href="https://www.achillemarozzo.it/historical-european-martial-arts" target="_blank">HEMA</a></h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="row justify-content-around my-6">
+        <div class="col">
+          <a href="/education.html" class="btn btn-primary">Education</a>
+        </div>
+        <div class="col">
+          <a href="/index.html" class="btn btn-primary">Home</a>
+        </div>
+        <div class="col">
+          <a href="/about.html" class="btn btn-primary">About</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-6">
+    <div class="row justify-content-center mt-5">
+      <div class="d-inline-flex">
+        <a href="../MartinoGiacchetti.pdf" class="btn btn-primary">
+          Download CV (.pdf)
+          <span class="ml-1"><span class="fa fa-download" aria-hidden="true"></span></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 
