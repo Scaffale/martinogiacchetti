@@ -38,6 +38,10 @@
   <!-- polyfill -->
   <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
 
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script src="../js/custom.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -53,193 +57,225 @@
 </head>
 <body>
   <div class="container mt-6 mb-6">
-    <div class="card bg-primary shadow-soft text-center border-light">
-      <div class="card-header">
-        <div class="row">
-          <div class="col">
-            <h1>
-              Martino Giacchetti
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <h3>
-              martino.giacchetti@gmail.com
-              <button class="btn btn-primary" type="button" onclick="copy('martino.giacchetti@gmail.com')">
-                  Copy
-                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
-              </button>
-            </h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h3>
-              (+39) 351 11 35 218
-              <button class="btn btn-primary" type="button" onclick="copy('+393511135218')">
-                  Copy
-                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
-              </button>
-            </h3>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center display-1">
+          Martino Giacchetti
+        </h1>
       </div>
     </div>
   </div>
 
-  <div class="container my-6 py-3">
-    <div class="row justify-content-center">
-      <div class="col-md-9">
-        <div class="card bg-primary shadow-soft text-center border-light p-4">
-          <h2>
-            I've been focusing on Human-Centric Design. Problem-Solving attitude, and I always welcome constructive feedback.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container mb-6">
-    <div class="row mt-4">
-      <div class="col">
-        <div class="card bg-primary border-light shadow-soft text-center">
-          <div class="card-header">
-            <div class="row">
-              <div class="col">
-                <h5>
-                  Find out more about "what did I study"
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
-                <h3>
-                  Education
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col">
-                <a href="/education.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-primary border-light shadow-soft text-center">
-          <div class="card-header">
-            <div class="row">
-              <div class="col">
-                <h5>
-                  Take a look at what I do
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
-                <h3>
-                  Work experiences
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col">
-                <a href="/works.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col">
-        <div class="card bg-primary border-light shadow-soft text-center">
-          <div class="card-header">
-            <div class="row">
-              <div class="col">
-                <h5>
-                  Who I am in a nutshell
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
-                <h3>
-                  About me
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col">
-                <a href="/about.html" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card bg-primary border-light shadow-soft text-center">
-          <div class="card-header">
-            <div class="row">
-              <div class="col">
-                <h5>
-                  Take a look at some sideprojects
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
-                <h3>
-                  <span class="mr-1"><span class="fab fa-github"></span></span>Github
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col">
-                <a href="https://github.com/Scaffale" target="_blank" class="btn btn-primary btn-pill text-dark mr-2 mb-2">Learn more</a>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row justify-content-center my-5 pb-6 pt-3">
+      <div class="col-lg-10">
+        <div class="card bg-primary shadow-soft text-center border-light p-5">
+          <h5 class="text-justify lead">
+            I’m Martino, a brave user experience designer, proud father of two, committed husband and frontend developer. I have a double master degree in Computer Science from Paris-Sud and Trento universities, with major in Human Computer Interaction and speciality of Cognitive Psychology. I am fast learning, committed, motivated, team oriented and ready to take crazy choices. I have experience both as a UX designer and a frontend developer. Some of the programming languages I have experience with include HTML, slim, scss, javascript, python, ruby, RoR, React, java and swift. Other tools I use are Sketch, Figma, Balsamiq, Post-it, paper and happiness.
+          </p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container my-6">
-    <div class="row justify-content-center mt-5">
-      <div class="d-inline-flex">
-        <a href="../MartinoGiacchetti.pdf" class="btn btn-primary">
-          Download CV (.pdf)
-          <span class="ml-1"><span class="fa fa-download" aria-hidden="true"></span></span>
+    <div class="row justify-content-around mb-3">
+      <div class="col-lg-3">
+        <a href="../MartinoGiacchetti.pdf">
+          <button class="btn btn-primary btn-block btn-lg animate-down-4" type="button">
+            <span class="mr-1"><i class="far fa-arrow-alt-circle-down"></i></span>
+            Get CV
+          </button>
         </a>
       </div>
+      <div class="col-lg-3">
+        <button class="btn btn-primary btn-block btn-lg animate-down-4" type="button" data-toggle="modal" data-target="#modal-contact">
+          <span class="mr-1"><i class="fas fa-address-book"></i></span>
+          contact
+        </button>
+      </div>
     </div>
+  </div>
+
+  <div class="container my-6">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 my-5 pt-6">
+        <h2 class="text-center display-2">
+          Projects
+        </h2>
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <video class="card-img-top rounded-top" autoplay loop muted='true'>
+            <source src="/projects/S06E01_Gossip-12-34.mp4" type="video/mp4">
+          </video>
+          <div class="card-body">
+            <span class="h6 icon-tertiary small"><span class="fa fa-telegram mr-2 ml-4"></span>Telgram</span>
+            <h3 class="h5 card-title mt-3">The Office GIF bot</h3>
+            <p class="card-text">A Telegram bot (inline-bot) to create gifs of the awesome TV series The Office.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-theoffice">More</button>
+            <!-- <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-primary btn-sm">Source</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <img src="/projects/paperui.png" class="card-img-top rounded-top">
+          <div class="card-body">
+            <span class="h6 icon-tertiary small">Interaction Design</span>
+            <span class="h6 icon-tertiary small ml-2">Leap motion</span>
+            <h3 class="h5 card-title mt-3">Paper UI</h3>
+            <p class="card-text">Sketch your own interface on paper and make it work using a Leap Motion.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-paperui">More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row mt-4">
+
+      <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <img src="/projects/getgo.png" class="card-img-top rounded-top">
+          <div class="card-body">
+            <span class="h6 icon-tertiary small"><span class="fa fa-telegram mr-2 ml-4"></span>Web</span>
+            <h3 class="h5 card-title mt-3">getgo</h3>
+            <p class="card-text">GetGo is a responsive web based application that curates and organizes all the necessary information students need when traveling abroad to pursue their studies.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-getgo">More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <img src="/projects/paperui.png" class="card-img-top rounded-top">
+          <div class="card-body">
+            <span class="h6 icon-tertiary small">Interaction Design</span>
+            <h3 class="h5 card-title mt-3">Paper UI</h3>
+            <p class="card-text">A Telegram bot (inline-bot) to create gifs of the awesome TV series The Office.</p>
+            <p class="card-text">Works as an inline bot, searching all episodes for the digited words, and returning the first 10 results.</p>
+            <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-primary btn-sm">Source</a>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <div class="container my-6">
     <div class="row justify-content-center mt-5">
       <div class="d-inline-flex">
         <a href="/half-brutal/index.html">Try different website version</a>
       </div>
     </div>
   </div>
+
+  <!-- Modal The Office -->
+  <div class="modal fade" id="modal-theoffice" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h6 modal-title mb-0" id="modal-title-default">The Office gif bot</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>In some Telegram chats with friends it urged the need of having some specific scene of The Office. From this need I created this bot.</p>
+          <p>It runs on Ruby on Rails, on a small dedicated server.</p>
+          <p>When queried the server searches through all the subtitles for a match. If found the scene is cutted with FFMPEG and displayed as animated gif (or muted video).</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-sm btn-primary" type="button">Source<span class="fab fa-github ml-2"></span></a>
+          <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal The Office -->
+
+  <!-- Modal PaperUI -->
+  <div class="modal fade" id="modal-paperui" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h6 modal-title mb-0" id="modal-title-default">PaperUI</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center mb-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/w8KE1EPb26w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p>Sketch your own interface on paper and make it work using a Leap Motion. </p>
+          <p>Draw interface widgets on paper and link them to the widgets on your application. PaperUI interfaces through a music player, thus available mappable widgets include Play/Pause and Stop buttons as well as Volume and Seek sliders. </p>
+          <p>We worked on this project as a team of 4 people, I was responsible for the system design and the UI implementation.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/domhorvath/PaperUI" target="_blank" class="btn btn-sm btn-primary" type="button">Source<span class="fab fa-github ml-2"></span></a>
+          <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal PaperUI -->
+
+  <!-- Modal getgo -->
+  <div class="modal fade" id="modal-getgo" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h6 modal-title mb-0" id="modal-title-default">getgo</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>GetGo is a responsive web based application that curates and organizes all the necessary information students need when traveling abroad to pursue their studies.</p>
+          <p>Getgo was among top 10 projects in a national competition (Startup Programme - EPA) in Paris. The competition ranked projects based on their implementation and innovation.</p>
+          <p>We worked on this project as a team of seven people, I was responsible for the UX and website backend implementation using Ruby on Rails</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/3osman/get_go_userauth" target="_blank" class="btn btn-sm btn-primary" type="button">Source<span class="fab fa-github ml-2"></span></a>
+          <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal getgo -->
+
+  <!-- Modal contact -->
+  <div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title mb-0" id="modal-title-default">Choose your channel</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center pl-3 mb-2">
+            <span class="mr-3" style="font-size:2em"><i class="fab fa-telegram"></i></span>
+            <strong>@MartinoGiacchetti</strong>
+          </div>
+          <div class="row align-items-center pl-3 mb-2">
+            <span class="mr-3" style="font-size:2em"><i class="fas fa-envelope"></i></span>
+            <strong>martino.giacchetti@gmail.com</strong>
+          </div>
+          <div class="row align-items-center pl-3 mb-2">
+            <span class="mr-3" style="font-size:2em"><i class="fas fa-phone-alt"></i></span>
+            <strong>+39 351 11 35 218</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal contact -->
 </body>
 </html>
 
