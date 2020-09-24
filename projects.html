@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Martino's history">
+  <meta name="keywords" content="UX, Frontend, Dev, Web and more">
+  <meta name="author" content="Martino Giacchetti">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta title="Martino Giacchetti">
+  <!-- <base href="https://www.martinogiacchetti.it/"> -->
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- neumorphism css -->
+  <link rel="stylesheet" href="css/neumorphism.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <script src="https://kit.fontawesome.com/63c5abad67.js" crossorigin="anonymous"></script>
+
+  <!-- polyfill -->
+  <script crossorigin="anonymous"src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+  <script src="../js/custom.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172156228-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172156228-1');
+  </script>
+
+</head>
+<body>
+  <div class="container mt-6 mb-6">
+    <div class="card bg-primary shadow-soft text-center border-light">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h1>
+              Martino Giacchetti
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h3>
+              martino.giacchetti@gmail.com
+              <button class="btn btn-primary" type="button" onclick="copy('martino.giacchetti@gmail.com')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>
+              (+39) 351 11 35 218
+              <button class="btn btn-primary" type="button" onclick="copy('+393511135218')">
+                  Copy
+                  <span class="ml-1"><span class="fas fa-clipboard"></span></span>
+              </button>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-6 py-3">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="card bg-primary shadow-soft text-center border-light p-4">
+          <h2>
+            I've been focusing on Human-Centric Design. Problem-Solving attitude, and I always welcome constructive feedback.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-6">
+    <div class="row mt-4">
+
+      <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <video class="card-img-top rounded-top" autoplay loop muted='true'>
+            <source src="/projects/S06E01_Gossip-12-34.mp4" type="video/mp4">
+          </video>
+          <div class="card-body">
+            <span class="h6 icon-tertiary small"><span class="fa fa-telegram mr-2 ml-4"></span>Telgram</span>
+            <h3 class="h5 card-title mt-3">The Office GIF bot</h3>
+            <p class="card-text">A Telegram bot (inline-bot) to create gifs of the awesome TV series The Office.</p>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-theoffice">More</button>
+            <!-- <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-primary btn-sm">Source</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card bg-primary border-light shadow-soft">
+          <img src="/projects/paperui.png" class="card-img-top rounded-top">
+          <div class="card-body">
+            <span class="h6 icon-tertiary small">Interaction Design</span>
+            <h3 class="h5 card-title mt-3">Paper UI</h3>
+            <p class="card-text">A Telegram bot (inline-bot) to create gifs of the awesome TV series The Office.</p>
+            <p class="card-text">Works as an inline bot, searching all episodes for the digited words, and returning the first 10 results.</p>
+            <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-primary btn-sm">Source</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal The Office -->
+  <div class="modal fade" id="modal-theoffice" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h6 modal-title mb-0" id="modal-title-default">The Office gif bot</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>In some Telegram chats with friends it urged the need of having some specific scene of The Office. From this need I created this bot.</p>
+          <p>It runs on Ruby on Rails, on a small dedicated server.</p>
+          <p>When queried the server searches through all the subtitles for a match. If found the scene is cutted with FFMPEG and displayed as animated gif (or muted video).</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/Scaffale/officebot" target="_blank" class="btn btn-sm btn-primary" type="button">Source<span class="fab fa-github ml-2"></span></a>
+          <!-- <button type="button" class="btn btn-sm btn-primary">I Got It</button> -->
+          <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End of Modal The Office -->
+</body>
+</html>
+
